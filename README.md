@@ -49,7 +49,7 @@
 
 
 - **WinnerCheck (우승자 판별)**
-  - [ ] getWinners(List&lt;Car&gt;) : 최대 거리를 기준으로 우승자 이름(String) 리스트 추출 및 반환
+  - [x] getWinners(List&lt;Car&gt;) : 최대 거리를 기준으로 우승자 이름(String) 리스트 추출 및 반환
 
 
 --- 
