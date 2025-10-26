@@ -25,7 +25,7 @@
 - **Car (모델)**
     - 속성 : name (String), position (Int)
     - 기능 :
-        - [ ] move(): 무작위 값(4 이상)에 따라 position을 1 증가
+        - [x] move(): 무작위 값(4 이상)에 따라 position을 1 증가
 
 
 - **InputView (입력)**
@@ -40,12 +40,12 @@
 
 
 - **ParseCar (파싱)**
-  - [ ] parse(String) : 문자열 파싱 후 List&lt;Car&gt; 생성 및 반환
-    - IllegalArgumentException : 이름 5자 이하 및 이름 공백/빈 값 등의 유효성 검사
+  - [x] parse(String) : 문자열 파싱 후 List&lt;Car&gt; 생성 및 반환
+  - [x] validateName(String) : 문자열에 대한 유효성 검사
 
 
 - **RaceGame (게임 로직)**
-  - [ ] flyLap(List&lt;Car&gt;) : 전달받은 자동차 리스트에 대해 난수 생성 및 Car.move() 호출
+  - [x] race(List&lt;Car&gt;) : 전달받은 자동차 리스트에 대해 난수 생성 및 Car.move() 호출
 
 
 - **WinnerCheck (우승자 판별)**
