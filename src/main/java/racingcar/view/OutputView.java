@@ -1,0 +1,35 @@
+package racingcar.view;
+
+import racingcar.domain.Car;
+
+import java.util.List;
+
+public class OutputView {
+
+    private static final String WINNER_MESSAGE = "최종 우승자 : ";
+    private static final String POSITION_MARK = "-";
+    private static final String ROUND_START_MESSAGE = "\n실행 결과";
+
+    public void printRoundResult(List<Car> carList) {
+        System.out.println(ROUND_START_MESSAGE);
+        for (Car car : carList) {
+            printCarPosition(car);
+        }
+        System.out.println();
+    }
+
+    private void printCarPosition(Car car) {
+        String hyphens = getPositionRepresent(car.getPosition());
+        System.out.println(car.getName() + " : " + hyphens);
+    }
+
+    // 자동차의 position을 hyphen(-)으로 표현
+    private String getPositionRepresent(int position) {
+        return POSITION_MARK.repeat(position);
+    }
+
+    public void printWinners(List<String> winners) {
+        String winnersOutput = String.join(", ", winners);
+        System.out.println(WINNER_MESSAGE + winnersOutput);
+    }
+}
