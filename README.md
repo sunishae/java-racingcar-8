@@ -12,12 +12,12 @@
 ## 기능 구현 목록(ToDo List)
 
 -  **RaceController (컨트롤러)**
-    - [ ] run() : 게임 전체 흐름 제어
+    - [x] run() : 게임 전체 흐름 제어
       - 입력 : InputView.readCarNames()로 자동차 이름 문자열 입력받기
       - 파싱/객체화 : ParseCar.parse()를 통해 유효성 검사를 거친 List&lt;Car&gt; 받기
       - 입력 : InputView.readRoundCount()를 통해 유효한 경주 횟수 입력받기
       - 게임 루프 : while (횟수 > 0) 동안 다음을 반복: 
-        - RaceGame.flyLap() 실행 및 OutputView.printRoundResult() 호출
+        - RaceGame.race() 실행 및 OutputView.printRoundResult() 호출
       - 우승자 결정 : WinnerCheck.getWinners()를 통해 우승자 이름 리스트 추출
       - 결과 출력 : OutputView.printWinners() 호출 후 종료
 
@@ -29,14 +29,14 @@
 
 
 - **InputView (입력)**
-    - [ ] readCarNames() : 자동차 리스트 문자열 입력
-    - [ ] readRoundCount() : 경주 횟수 입력
+    - [x] readCarNames() : 자동차 리스트 문자열 입력
+    - [x] readRoundCount() : 경주 횟수 입력
       - IllegalArgumentException : 숫자 변환 및 1회 미만 예외 처리
 
 
 - **OutputView (출력)**
-    - [ ] printRoundResult(List&lt;Car&gt;) : 한회차가 끝난 후 모든 자동차의 현재 상태출력
-    - [ ] printWinners(List&lt;String&gt;) : 최종 우승자 이름 목록 출력
+    - [x] printRoundResult(List&lt;Car&gt;) : 한회차가 끝난 후 모든 자동차의 현재 상태출력
+    - [x] printWinners(List&lt;String&gt;) : 최종 우승자 이름 목록 출력
 
 
 - **ParseCar (파싱)**
@@ -46,6 +46,10 @@
 
 - **RaceGame (게임 로직)**
   - [x] race(List&lt;Car&gt;) : 전달받은 자동차 리스트에 대해 난수 생성 및 Car.move() 호출
+
+
+- **RoundValidator (유효성 검사)**
+  - [x] validateAndParse(String) : 전달받은 횟수 문자열을 검사하고 정수형으로 변환
 
 
 - **WinnerCheck (우승자 판별)**
