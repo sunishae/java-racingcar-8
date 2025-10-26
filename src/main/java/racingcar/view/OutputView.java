@@ -10,8 +10,11 @@ public class OutputView {
     private static final String POSITION_MARK = "-";
     private static final String ROUND_START_MESSAGE = "\n실행 결과";
 
-    public void printRoundResult(List<Car> carList) {
+    public void printStartMessage() {
         System.out.println(ROUND_START_MESSAGE);
+    }
+
+    public void printRoundResult(List<Car> carList) {
         for (Car car : carList) {
             printCarPosition(car);
         }
