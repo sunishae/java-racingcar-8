@@ -37,7 +37,8 @@ public class RaceController {
         raceRounds(carList, roundCount);
 
         // 3. 우승자 판별 및 출력
-        determineAndPrintWinners(carList);
+        List<String> winners = winnerCheck.getWinners(carList);
+        outputView.printWinners(winners);
     }
 
     // 라운드 반복 실행
@@ -46,11 +47,5 @@ public class RaceController {
             raceGame.race(carList);
             outputView.printRoundResult(carList);
         }
-    }
-
-    // 우승자를 판별하고 결과를 출력
-    private void determineAndPrintWinners(List<Car> carList) {
-        List<String> winners = winnerCheck.getWinners(carList);
-        outputView.printWinners(winners);
     }
 }
