@@ -1,9 +1,9 @@
 package racingcar.domain;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @DisplayName("Car 도메인 테스트")
 public class CarTest {
@@ -23,8 +23,8 @@ public class CarTest {
     @DisplayName("4 이상이 난수면 자동차는 1칸 전진한다.")
     void When_FourOrGreater_Expect_MoveForward() {
         //given
-        Car carMin = new Car(TEST_NAME, INITIAL_POSITION);
-        Car carMax = new Car(TEST_NAME, INITIAL_POSITION);
+        Car carMin = new Car(TEST_NAME);
+        Car carMax = new Car(TEST_NAME);
 
         //when
         carMin.move(MOVING_NUMBER);
@@ -39,8 +39,8 @@ public class CarTest {
     @DisplayName("3 이하이 난수면 자동차는 움직이지 않는다.")
     void When_ThreeOrLess_Expect_DoNotMove() {
         //given
-        Car carMin = new Car(TEST_NAME, INITIAL_POSITION);
-        Car carMax = new Car(TEST_NAME, INITIAL_POSITION);
+        Car carMin = new Car(TEST_NAME);
+        Car carMax = new Car(TEST_NAME);
 
         //when
         carMin.move(STOPPING_NUMBER_MIN);

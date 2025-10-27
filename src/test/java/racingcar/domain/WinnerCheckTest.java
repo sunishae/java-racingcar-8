@@ -1,12 +1,11 @@
 package racingcar.domain;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 @DisplayName("WinnerCheck 우승자 판별 테스트")
 class WinnerCheckTest {
@@ -18,9 +17,9 @@ class WinnerCheckTest {
     void getWinners_SingleWinner_ReturnsCorrectName() {
         // given
         List<Car> carList = Arrays.asList(
-                new Car("pobi", 5),
-                new Car("woni", 3),
-                new Car("jun", 4)
+                new Car("pobi"),
+                new Car("woni"),
+                new Car("jun")
         );
 
         // when
@@ -35,10 +34,10 @@ class WinnerCheckTest {
     void getWinners_MultipleWinners_ReturnsAllNames() {
         // given
         List<Car> carList = Arrays.asList(
-                new Car("woni", 3),
-                new Car("pobi", 5),
-                new Car("jun", 5),
-                new Car("haech", 3)
+                new Car("woni"),
+                new Car("pobi"),
+                new Car("jun"),
+                new Car("haech")
         );
 
         // when
