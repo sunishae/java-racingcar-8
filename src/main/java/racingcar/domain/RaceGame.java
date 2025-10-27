@@ -1,11 +1,10 @@
 package racingcar.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
-
 import java.util.List;
 
 public class RaceGame {
-
+    
     private static final int MIN_NUMBER = 0;
     private static final int MAX_NUMBER = 9;
 

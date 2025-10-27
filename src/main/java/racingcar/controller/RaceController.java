@@ -1,13 +1,12 @@
 package racingcar.controller;
 
+import java.util.List;
 import racingcar.domain.Car;
 import racingcar.domain.ParseCar;
 import racingcar.domain.RaceGame;
 import racingcar.domain.WinnerCheck;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
-
-import java.util.List;
 
 public class RaceController {
 
@@ -27,7 +26,7 @@ public class RaceController {
     }
 
     public void run() {
-        // 1. 입력 및 객체 생성
+        // 1. 사용자 입력 및 Car List 생성
         String carNamesInput = inputView.readCarNames();
         List<Car> carList = parseCar.parse(carNamesInput);
         int roundCount = inputView.readRoundCount();
@@ -41,7 +40,6 @@ public class RaceController {
         outputView.printWinners(winners);
     }
 
-    // 라운드 반복 실행
     private void raceRounds(List<Car> carList, int roundCount) {
         for (int i = 0; i < roundCount; i++) {
             raceGame.race(carList);

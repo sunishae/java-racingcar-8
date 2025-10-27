@@ -17,9 +17,9 @@ public class ParseCar {
         List<Car> carList = new ArrayList<>();
 
         for (String carName : carNames) {
-            String trimmedCarName = carName.trim();
-            validateName(trimmedCarName);
-            carList.add(new Car(trimmedCarName));
+            String trimedCarName = carName.trim();
+            validateName(trimedCarName);
+            carList.add(new Car(trimedCarName));
         }
 
         return carList;

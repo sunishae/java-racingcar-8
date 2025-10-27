@@ -1,18 +1,17 @@
 package racingcar.domain;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
+import java.util.List;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
-
 @DisplayName("ParseCar 파싱 및 유효성 테스트")
 class ParseCarTest {
-
+    
     private static final String EXCEPTION_MESSAGE = "[ERROR] 자동차 이름은 1자 이상 5자 이하여야 합니다.";
     private final ParseCar parser = new ParseCar();
 

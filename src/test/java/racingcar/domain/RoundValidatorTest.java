@@ -1,10 +1,10 @@
 package racingcar.domain;
 
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @DisplayName("RoundValidator 시도 횟수 유효성 테스트")
 public class RoundValidatorTest {

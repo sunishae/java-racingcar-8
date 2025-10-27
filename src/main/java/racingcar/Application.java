@@ -12,11 +12,12 @@ public class Application {
     public static void main(String[] args) {
 
         RoundValidator roundValidator = new RoundValidator();
-        InputView inputView = new InputView(roundValidator);
-        OutputView outputView = new OutputView();
         ParseCar parseCar = new ParseCar();
         RaceGame raceGame = new RaceGame();
         WinnerCheck winnerCheck = new WinnerCheck();
+
+        InputView inputView = new InputView(roundValidator);
+        OutputView outputView = new OutputView();
 
         RaceController raceController = new RaceController(
                 inputView,
